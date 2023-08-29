@@ -46,20 +46,25 @@ const SearchBooks = () => {
         throw new Error("something went wrong!");
       }
 
-      const { items } = await response.json();
+      const items = await response.json();
+console.log(items);
+      // const bookData = items.map((book) => ({
+      //   bookId: book.id,
+      //   authors: book.volumeInfo.authors || ["No author to display"],
+      //   title: book.volumeInfo.title,
+      //   description: book.volumeInfo.description,
+      //   image: book.volumeInfo.imageLinks?.thumbnail || "",
+      //   link: book.volumeInfo.infoLink,
+      // }));
+      const movieData = {
+        title: items.Title,
+        plot: items.Plot,
+        poster: items.Poster,
+      }
 
-      const bookData = items.map((book) => ({
-        bookId: book.id,
-        authors: book.volumeInfo.authors || ["No author to display"],
-        title: book.volumeInfo.title,
-        description: book.volumeInfo.description,
-        image: book.volumeInfo.imageLinks?.thumbnail || "",
-        link: book.volumeInfo.infoLink,
-      }));
-
-      setSearchedBooks(bookData);
+      // setSearchedBooks(movieData);
       setSearchInput("");
-      console.log(bookData);
+      console.log(movieData);
     } catch (err) {
       console.error(err);
     }
