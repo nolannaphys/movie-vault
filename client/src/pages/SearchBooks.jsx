@@ -109,7 +109,7 @@ console.log(items);
     <>
       <div className="text-light bg-dark pt-5">
         <Container>
-          <h1>Search for Books!</h1>
+          <h1>Search for a Movie!</h1>
           <Form onSubmit={handleFormSubmit}>
             <Row>
               <Col xs={12} md={8}>
@@ -119,7 +119,7 @@ console.log(items);
                   onChange={(e) => setSearchInput(e.target.value)}
                   type="text"
                   size="lg"
-                  placeholder="Search for a book"
+                  placeholder="Search for a movie"
                 />
               </Col>
               <Col xs={12} md={4}>
@@ -136,7 +136,7 @@ console.log(items);
         <h2 className="pt-5">
           {searchedBooks.length
             ? `Viewing ${searchedBooks.length} results:`
-            : "Search for a book to begin"}
+            : "Search for a movie to begin"}
         </h2>
         <Row>
           {searchedBooks.map((book) => {
@@ -165,8 +165,8 @@ console.log(items);
                         {savedBookIds?.some(
                           (savedBookId) => savedBookId === book.bookId
                         )
-                          ? "This book has already been saved!"
-                          : "Save this Book!"}
+                          ? "This movie has already been saved!"
+                          : "Save this Movie!"}
                       </Button>
                     )}
                   </Card.Body>
