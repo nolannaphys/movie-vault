@@ -2,7 +2,7 @@ const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   input MovieInput {
-    director: [String]
+    directors: [String]
     plot: String
     title: String!
     movieId: String!
@@ -20,7 +20,7 @@ const typeDefs = gql`
 
   type Movie {
     movieId: ID!
-    director: [String]
+    directors: [String]
     plot: String
     title: String!
     poster: String
