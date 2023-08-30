@@ -1,12 +1,12 @@
-export const getSavedBookIds = () => {
-  const savedBookIds = localStorage.getItem('saved_books')
+export const getSavedMovieIds = () => {
+  const savedMovieIds = localStorage.getItem('saved_books')
     ? JSON.parse(localStorage.getItem('saved_books'))
     : [];
 
-  return savedBookIds;
+  return savedMovieIds;
 };
 
-export const saveBookIds = (bookIdArr) => {
+export const saveMovieIds = (bookIdArr) => {
   if (bookIdArr.length) {
     localStorage.setItem('saved_books', JSON.stringify(bookIdArr));
   } else {
@@ -15,16 +15,16 @@ export const saveBookIds = (bookIdArr) => {
 };
 
 export const removeBookId = (bookId) => {
-  const savedBookIds = localStorage.getItem('saved_books')
+  const savedMovieIds = localStorage.getItem('saved_books')
     ? JSON.parse(localStorage.getItem('saved_books'))
     : null;
 
-  if (!savedBookIds) {
+  if (!savedMovieIds) {
     return false;
   }
 
-  const updatedSavedBookIds = savedBookIds?.filter((savedBookId) => savedBookId !== bookId);
-  localStorage.setItem('saved_books', JSON.stringify(updatedSavedBookIds));
+  const updatedSavedMovieIds = savedMovieIds?.filter((savedBookId) => savedBookId !== bookId);
+  localStorage.setItem('saved_books', JSON.stringify(updatedSavedMovieIds));
 
   return true;
 };

@@ -1,5 +1,5 @@
-// make a search to google books api
-// https://www.googleapis.com/books/v1/volumes?q=harry+potter
-export const searchGoogleBooks = (query) => {
+// make a search to Open Movie Database api
+//NOTE - searchGoogleBooks replaced by searchOMDB
+export const searchOMDB = (query) => {
   return fetch(`http://www.omdbapi.com/?t=${query}&apikey=9f162971`);
 };
