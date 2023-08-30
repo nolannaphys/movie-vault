@@ -7,7 +7,7 @@ export const GET_ME = gql`
       movieCount
       email
       savedMovies {
-        directors
+        director
         movieId
         description
         image
