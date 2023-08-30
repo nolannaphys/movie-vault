@@ -89,6 +89,7 @@ console.log(items);
         variables: {
           movieToSave: movieToSave // Pass the movieToSave object as the variable
         },
+        //FIXME - why is it mad?
         update: (cache, { data }) => {
           // Update cache here if needed
         },
@@ -144,7 +145,7 @@ console.log(items);
         <Row>
           {searchedMovies.map((movie) => {
             return (
-              <Col key={movie.movieId} md="3">
+              <Col key={movie.movieId} md="4">
                 <Card border="dark">
                   {movie.poster ? (
                     <Card.Img
@@ -156,7 +157,7 @@ console.log(items);
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
                     <p className="small">Director: {movie.director}</p>
-                    <Card.Text>{movie.description}</Card.Text>
+                    <Card.Text>{movie.plot}</Card.Text>
                     {Auth.loggedIn() && (
                       <Button
                         disabled={savedMovieIds?.some(
