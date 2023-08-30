@@ -2,7 +2,11 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 // import schema from Movie.js
+<<<<<<< HEAD
 const movieSchema = require('./Book');
+=======
+const bookSchema = require('./Movie');
+>>>>>>> 9819620 (movie.js added)
 
 const userSchema = new Schema(
   {
