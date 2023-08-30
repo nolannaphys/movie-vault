@@ -4,11 +4,11 @@ export const GET_ME = gql`
   query Me {
     me {
       _id
-      bookCount
+      movieCount
       email
-      savedBooks {
+      savedMovies {
         authors
-        bookId
+        movieId
         description
         image
         link
