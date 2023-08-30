@@ -61,7 +61,7 @@ console.log(items);
         title: items.Title,
         plot: items.Plot,
         poster: items.Poster,
-        
+        director: items.Director,
       }]
 //TODO - Find out what setSearchedBooks is doing
       setSearchedMovies(movieData);
@@ -107,6 +107,7 @@ console.log(items);
     }
   };
 
+  //NOTE -  This is the return
   return (
     <>
       <div className="text-light bg-dark pt-5">
@@ -121,7 +122,7 @@ console.log(items);
                   onChange={(e) => setSearchInput(e.target.value)}
                   type="text"
                   size="lg"
-                  placeholder="Search for a movie"
+                  placeholder="Search for a Movie"
                 />
               </Col>
               <Col xs={12} md={4}>
@@ -154,7 +155,7 @@ console.log(items);
                   ) : null}
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
-                    <p className="small">Authors: {movie.authors}</p>
+                    <p className="small">Director: {movie.director}</p>
                     <Card.Text>{movie.description}</Card.Text>
                     {Auth.loggedIn() && (
                       <Button
