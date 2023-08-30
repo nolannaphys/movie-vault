@@ -56,13 +56,15 @@ console.log(items);
       //   image: book.volumeInfo.imageLinks?.thumbnail || "",
       //   link: book.volumeInfo.infoLink,
       // }));
-      const movieData = {
+      //NOTE - Object Movie
+      const movieData = [{
         title: items.Title,
         plot: items.Plot,
         poster: items.Poster,
-      }
+        
+      }]
 //TODO - Find out what setSearchedBooks is doing
-      // setSearchedBooks(movieData);
+      setSearchedMovies(movieData);
       setSearchInput("");
       console.log(movieData);
     } catch (err) {
@@ -85,20 +87,20 @@ console.log(items);
     try {
       await saveMovie({
         variables: {
-          movieToSave: movieToSave // Pass the bookToSave object as the variable
+          movieToSave: movieToSave // Pass the movieToSave object as the variable
         },
         update: (cache, { data }) => {
           // Update cache here if needed
         },
-        refetchQueries: [{ query: GET_ME }], // Refetch user data after saving the book
+        refetchQueries: [{ query: GET_ME }], // Refetch user data after saving the movie
       });
 
-      console.log(bookToSave);
+      console.log(movieToSave);
       if (error) {
         throw new Error("something went wrong!");
       }
-      // if book successfully saves to user's account, save book id to state
-      setSavedMovieIds([...savedMovieIds, bookToSave.bookId]);
+      // if movie successfully saves to user's account, save movie id to state
+      setSavedMovieIds([...savedMovieIds, movieToSave.movieId]);
       console.log(savedMovieIds);
     } catch (err) {
       console.error(err);
@@ -134,36 +136,36 @@ console.log(items);
 
       <Container>
         <h2 className="pt-5">
-          {searchedBooks.length
-            ? `Viewing ${searchedBooks.length} results:`
+          {searchedMovies.length
+            ? `Viewing ${searchedMovies.length} results:`
             : "Search for a movie to begin"}
         </h2>
         <Row>
-          {searchedBooks.map((book) => {
+          {searchedMovies.map((movie) => {
             return (
-              <Col key={book.bookId} md="4">
+              <Col key={movie.movieId} md="4">
                 <Card border="dark">
-                  {book.image ? (
+                  {movie.poster ? (
                     <Card.Img
-                      src={book.image}
-                      alt={`The cover for ${book.title}`}
+                      src={movie.poster}
+                      alt={`The cover for ${movie.title}`}
                       variant="top"
                     />
                   ) : null}
                   <Card.Body>
-                    <Card.Title>{book.title}</Card.Title>
-                    <p className="small">Authors: {book.authors}</p>
-                    <Card.Text>{book.description}</Card.Text>
+                    <Card.Title>{movie.title}</Card.Title>
+                    <p className="small">Authors: {movie.authors}</p>
+                    <Card.Text>{movie.description}</Card.Text>
                     {Auth.loggedIn() && (
                       <Button
                         disabled={savedMovieIds?.some(
-                          (savedBookId) => savedBookId === book.bookId
+                          (savedMovieId) => savedMovieId === movie.movieId
                         )}
                         className="btn-block btn-info"
-                        onClick={() => handleSaveBook(book.bookId)}
+                        onClick={() => handleSaveMovie(movie.movieId)}
                       >
                         {savedMovieIds?.some(
-                          (savedBookId) => savedBookId === book.bookId
+                          (savedMovieId) => savedMovieId === movie.movieId
                         )
                           ? "This movie has already been saved!"
                           : "Save this Movie!"}
@@ -180,4 +182,4 @@ console.log(items);
   );
 };
 
-export default SearchBooks;
+export default SearchMovies;
