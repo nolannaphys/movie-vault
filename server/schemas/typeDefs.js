@@ -6,14 +6,7 @@ const typeDefs = gql`
     plot: String
     title: String!
     movieId: String!
-    image: String
-=======
-    director: [String]
-    plot: String
-    title: String!
-    movieId: String!
     poster: String
->>>>>>> 27e7b51 (updated book to movie)
     link: String
   }
 
