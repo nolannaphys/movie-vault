@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import App from './App.jsx'
-import SearchMovies from './pages/SearchMovies'
-import SavedMovies from './pages/SavedMovies'
+import SearchMovies from './pages/SearchBooks'
+import SavedMovies from './pages/SavedBooks'
 
 const router = createBrowserRouter([
   {
