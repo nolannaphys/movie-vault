@@ -144,7 +144,7 @@ console.log(items);
         <Row>
           {searchedMovies.map((movie) => {
             return (
-              <Col key={movie.movieId} md="4">
+              <Col key={movie.movieId} md="3">
                 <Card border="dark">
                   {movie.poster ? (
                     <Card.Img
