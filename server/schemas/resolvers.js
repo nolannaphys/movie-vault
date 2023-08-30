@@ -1,4 +1,4 @@
-const { User, Book } = require("../models");
+const { User, Movie } = require("../models");
 const { signToken } = require("../utils/auth")
 
 const resolvers = {
@@ -33,7 +33,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        saveBook: async (parent, args, context) => {
+        saveMovie: async (parent, args, context) => {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     {
@@ -41,7 +41,7 @@ const resolvers = {
                     },
                     {
                         $push: {
-                            savedBooks: args.bookToSave,
+                            savedMovies: args.movieToSave,
                         },
                     },
                     {
@@ -53,7 +53,7 @@ const resolvers = {
             }
             throw new Error("user not found");
         },
-        removeBook: async (parent, args, context) => {
+        removeMovie: async (parent, args, context) => {
             if (context.user) {
                 const updatedUser = await User.findByIdAndUpdate(
                     {
@@ -61,8 +61,8 @@ const resolvers = {
                     },
                     {
                         $pull: {
-                            savedBooks: {
-                                bookId: args.bookId
+                            savedMovies: {
+                                movieId: args.movieId
                             }
                         },
                     },
