@@ -28,4 +28,4 @@ const movieSchema = new Schema({
   },
 });
 
-module.exports = bookSchema;
+module.exports = movieSchema;
