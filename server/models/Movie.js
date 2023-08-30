@@ -11,7 +11,7 @@ const movieSchema = new Schema({
     type: String,
     required: true,
   },
-  // saved movie id from Movie API
+  // saved movie id from OMDb
   movieId: {
     type: String,
     required: true,
