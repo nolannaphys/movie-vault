@@ -34,10 +34,10 @@ const SavedBooks = () => {
       });
 
       if (!response.data) {
-        throw new Error('Something went wrong while removing the book!');
+        throw new Error('Something went wrong while removing the movie!');
       }
 
-      // upon success, remove book's id from localStorage
+      // upon success, remove movie's id from localStorage
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
@@ -52,7 +52,7 @@ const SavedBooks = () => {
     <>
       <div fluid="true" className="text-light bg-dark p-5">
         <Container>
-          <h1>Viewing saved books!</h1>
+          <h1>Viewing saved movies!</h1>
         </Container>
       </div>
       <Container>
@@ -72,7 +72,7 @@ const SavedBooks = () => {
                     <p className='small'>Authors: {book.authors}</p>
                     <Card.Text>{book.description}</Card.Text>
                     <Button className='btn-block btn-danger' onClick={() => handleDeleteBook(book.bookId)}>
-                      Delete this Book!
+                      Delete this Movie!
                     </Button>
                   </Card.Body>
                 </Card>
