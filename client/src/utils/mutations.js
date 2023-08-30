@@ -10,10 +10,10 @@ export const LOGIN_USER = gql`
         email
         movieCount
         savedMovies {
-          authors
+          directors
           movieId
-          description
-          image
+          plot
+          poster
           link
           title
         }
@@ -32,10 +32,10 @@ export const ADD_USER = gql`
         email
         movieCount
         savedMovies {
-          authors
+          directors
           movieId
-          description
-          image
+          plot
+          poster
           link
           title
         }
@@ -53,10 +53,10 @@ export const SAVE_MOVIE = gql`
         movieCount
         savedMovies {
           movieId
-          authors
-          description
+          directors
+          plot
           title
-          image
+          poster
           link
         }
     }
@@ -72,10 +72,10 @@ export const REMOVE_MOVIE = gql`
       movieCount
       savedMovies {
         movieId
-        authors
-        description
+        directors
+        plot
         title
-        image
+        poster
         link
       }
     }
