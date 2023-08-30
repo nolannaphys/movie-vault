@@ -61,7 +61,7 @@ console.log(items);
         plot: items.Plot,
         poster: items.Poster,
       }
-
+//TODO - Find out what setSearchedBooks is doing
       // setSearchedBooks(movieData);
       setSearchInput("");
       console.log(movieData);
