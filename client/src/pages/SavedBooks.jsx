@@ -8,18 +8,18 @@ import {
 } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
-import { removeBookId } from '../utils/localStorage';
+import { removeMovieId } from '../utils/localStorage';
 import { useMutation, useQuery } from "@apollo/client";
-import { REMOVE_BOOK } from "../utils/mutations";
+import { REMOVE_MOVIE } from "../utils/mutations";
 import { GET_ME } from '../utils/queries';
 
-const SavedBooks = () => {
+const SavedMovies = () => {
   const { loading, data } = useQuery(GET_ME);
-  const [removeBook] = useMutation(REMOVE_BOOK);
+  const [removeMovie] = useMutation(REMOVE_MOVIE);
   const userData = data?.me;
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  const handleDeleteBook = async (bookId) => {
+  // create function that accepts the movie's mongo _id value as param and deletes the movie from the database
+  const handleDeleteMovie = async (movieId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -27,9 +27,9 @@ const SavedBooks = () => {
     }
 
     try {
-      const response = await removeBook({
+      const response = await removeMovie({
         variables: {
-          bookId: bookId
+          movieId: movieId
         },
       });
 
@@ -38,7 +38,7 @@ const SavedBooks = () => {
       }
 
       // upon success, remove movie's id from localStorage
-      removeBookId(bookId);
+      removeMovieId(movieId);
     } catch (err) {
       console.error(err);
     }
@@ -57,21 +57,21 @@ const SavedBooks = () => {
       </div>
       <Container>
         <h2 className='pt-5'>
-          {userData?.savedBooks.length
-            ? `Viewing ${userData.savedBooks.length} saved ${userData?.savedBooks.length === 1 ? 'book' : 'books'}:`
+          {userData?.savedMovies.length
+            ? `Viewing ${userData.savedMovies.length} saved ${userData?.savedMovies.length === 1 ? 'movie' : 'movies'}:`
             : 'You have no saved movies!'}
         </h2>
         <Row>
-          {userData?.savedBooks.map((book) => {
+          {userData?.savedMovies.map((movie) => {
             return (
-              <Col md="4" key={book.bookId}>
+              <Col md="4" key={movie.movieId}>
                 <Card border='dark'>
-                  {book.image ? <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' /> : null}
+                  {movie.image ? <Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' /> : null}
                   <Card.Body>
-                    <Card.Title>{book.title}</Card.Title>
-                    <p className='small'>Authors: {book.authors}</p>
-                    <Card.Text>{book.description}</Card.Text>
-                    <Button className='btn-block btn-danger' onClick={() => handleDeleteBook(book.bookId)}>
+                    <Card.Title>{movie.title}</Card.Title>
+                    <p className='small'>Authors: {movie.authors}</p>
+                    <Card.Text>{movie.description}</Card.Text>
+                    <Button className='btn-block btn-danger' onClick={() => handleDeleteMovie(movie.movieId)}>
                       Delete this Movie!
                     </Button>
                   </Card.Body>
@@ -85,4 +85,4 @@ const SavedBooks = () => {
   );
 };
 
-export default SavedBooks;
+export default SavedMovies;
