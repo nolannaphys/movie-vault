@@ -9,29 +9,29 @@ import {
 } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
-import { searchGoogleBooks } from "../utils/API";
-import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
-import { SAVE_BOOK } from "../utils/mutations";
+import { searchOMDB } from "../utils/API";
+import { saveMovieIds, getSavedMovieIds } from "../utils/localStorage";
+import { SAVE_MOVIE } from "../utils/mutations";
 import { GET_ME } from "../utils/queries";
 
-const SearchBooks = () => {
+const SearchMovies = () => {
   // create state for holding returned google api data
-  const [searchedBooks, setSearchedBooks] = useState([]);
+  const [searchedMovies, setSearchedMovies] = useState([]);
   // create state for holding our search field data
   const [searchInput, setSearchInput] = useState("");
 
-  // create state to hold saved bookId values
-  const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
+  // create state to hold saved movieId values
+  const [savedMovieIds, setSavedMovieIds] = useState(getSavedMovieIds());
 
-  const [saveBook, { error }] = useMutation(SAVE_BOOK);
+  const [saveMovie, { error }] = useMutation(SAVE_MOVIE);
 
-  // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
+  // set up useEffect hook to save `savedMovieIds` list to localStorage on component unmount
 
   useEffect(() => {
-    return () => saveBookIds(savedBookIds);
+    return () => saveMovieIds(savedMovieIds);
   });
 
-  // create method to search for books and set state on form submit
+  // create method to search for movies and set state on form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -40,7 +40,7 @@ const SearchBooks = () => {
     }
 
     try {
-      const response = await searchGoogleBooks(searchInput);
+      const response = await searchOMDB(searchInput);
 
       if (!response.ok) {
         throw new Error("something went wrong!");
@@ -70,10 +70,10 @@ console.log(items);
     }
   };
 
-  // create function to handle saving a book to our database
-  const handleSaveBook = async (bookId) => {
-    // find the book in `searchedBooks` state by the matching id
-    const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
+  // create function to handle saving a movie to our database
+  const handleSaveMovie = async (movieId) => {
+    // find the movie in `searchedMovies` state by the matching id
+    const movieToSave = searchedMovies.find((movie) => movie.movieId === movieId);
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
     console.log("Is user logged in?", Auth.loggedIn());
@@ -81,11 +81,11 @@ console.log(items);
     if (!token) {
       return false;
     }
-    // console.log(bookToSave);
+    // console.log(movieToSave);
     try {
-      await saveBook({
+      await saveMovie({
         variables: {
-          bookToSave: bookToSave // Pass the bookToSave object as the variable
+          movieToSave: movieToSave // Pass the bookToSave object as the variable
         },
         update: (cache, { data }) => {
           // Update cache here if needed
@@ -98,8 +98,8 @@ console.log(items);
         throw new Error("something went wrong!");
       }
       // if book successfully saves to user's account, save book id to state
-      setSavedBookIds([...savedBookIds, bookToSave.bookId]);
-      console.log(savedBookIds);
+      setSavedMovieIds([...savedMovieIds, bookToSave.bookId]);
+      console.log(savedMovieIds);
     } catch (err) {
       console.error(err);
     }
@@ -156,13 +156,13 @@ console.log(items);
                     <Card.Text>{book.description}</Card.Text>
                     {Auth.loggedIn() && (
                       <Button
-                        disabled={savedBookIds?.some(
+                        disabled={savedMovieIds?.some(
                           (savedBookId) => savedBookId === book.bookId
                         )}
                         className="btn-block btn-info"
                         onClick={() => handleSaveBook(book.bookId)}
                       >
-                        {savedBookIds?.some(
+                        {savedMovieIds?.some(
                           (savedBookId) => savedBookId === book.bookId
                         )
                           ? "This movie has already been saved!"
