@@ -2,9 +2,8 @@ const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   input MovieInput {
-<<<<<<< HEAD
-    authors: [String]
-    description: String
+    director: [String]
+    plot: String
     title: String!
     movieId: String!
     image: String
@@ -28,13 +27,8 @@ const typeDefs = gql`
 
   type Movie {
     movieId: ID!
-<<<<<<< HEAD
-    authors: [String]
-    description: String
-=======
     director: [String]
     plot: String
->>>>>>> 27e7b51 (updated book to movie)
     title: String!
     poster: String
     link: String
