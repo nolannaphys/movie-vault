@@ -47,7 +47,7 @@ const SearchMovies = () => {
       }
 
       const items = await response.json();
-console.log(items);
+      console.log(items);
       // const bookData = items.map((book) => ({
       //   bookId: book.id,
       //   authors: book.volumeInfo.authors || ["No author to display"],
@@ -56,6 +56,15 @@ console.log(items);
       //   image: book.volumeInfo.imageLinks?.thumbnail || "",
       //   link: book.volumeInfo.infoLink,
       // }));
+    
+    //NOTE - is this a better object?
+      // const movieData = items.map((movie) => ({
+      //   title: movie.movie,
+      //   director: director.movie || ["No director to display"],
+      //   plot: plot.movie.full,
+      //   poster: poster.movie
+      // }))
+
       //NOTE - Object Movie
       const movieData = [{
         title: items.Title,
@@ -63,7 +72,7 @@ console.log(items);
         poster: items.Poster,
         director: items.Director,
       }]
-//TODO - Find out what setSearchedBooks is doing
+      //TODO - Find out what setSearchedBooks is doing
       setSearchedMovies(movieData);
       setSearchInput("");
       console.log(movieData);
@@ -127,9 +136,9 @@ console.log(items);
                 />
               </Col>
               <Col xs={12} md={4}>
-              <Button type="submit" variant="success" size="lg" style={{backgroundColor: 'turquoise'}}>
-    Submit Search
-  </Button>
+                <Button type="submit" variant="success" size="lg" style={{ backgroundColor: 'turquoise' }}>
+                  Submit Search
+                </Button>
               </Col>
             </Row>
           </Form>
