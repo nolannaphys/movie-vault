@@ -9,8 +9,8 @@ export const GET_ME = gql`
       savedMovies {
         directors
         movieId
-        description
-        image
+        plot
+        poster
         link
         title
       }
