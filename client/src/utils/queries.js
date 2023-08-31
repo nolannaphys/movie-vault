@@ -7,7 +7,7 @@ export const GET_ME = gql`
       movieCount
       email
       savedMovies {
-        director
+        directors
         movieId
         plot
         poster
