@@ -1,14 +1,6 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-  input MovieInput {
-    directors: [String]
-    plot: String
-    title: String!
-    movieId: String!
-    poster: String
-    link: String
-  }
 
   type User {
     _id: ID!
@@ -23,6 +15,15 @@ const typeDefs = gql`
     directors: [String]
     plot: String
     title: String!
+    poster: String
+    link: String
+  }
+
+  input MovieInput {
+    directors: [String]
+    plot: String
+    title: String!
+    movieId: String!
     poster: String
     link: String
   }
