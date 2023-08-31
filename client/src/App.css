@@ -15,3 +15,8 @@ h6 {
   font-weight: 300;
   font-style: italic;
 }
+/* centering the returned movie link */
+.centered-link {
+  display: flex;
+  justify-content: center;
+}
