@@ -11,7 +11,7 @@ export const LOGIN_USER = gql`
         movieCount
         savedMovies {
           directors
-          movieId
+        movieId
           plot
           poster
           link
