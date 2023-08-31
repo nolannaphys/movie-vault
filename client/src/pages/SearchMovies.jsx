@@ -113,7 +113,7 @@ console.log(items);
     <>
       <div className="text-light bg-dark pt-5">
         <Container>
-          <h1>Search for a Movie!</h1>
+          <h1>Search for a Movie!🎥🎬 </h1>
           <Form onSubmit={handleFormSubmit}>
             <Row>
               <Col xs={12} md={8}>
