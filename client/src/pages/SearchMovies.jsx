@@ -112,6 +112,7 @@ const SearchMovies = () => {
       // if movie successfully saves to user's account, save movie id to state
       setSavedMovieIds([...savedMovieIds, movieToSave.movieId]);
       console.log(savedMovieIds);
+      window.location.assign('/saved');
     } catch (err) {
       console.error(err);
     }
