@@ -65,12 +65,10 @@ export const REMOVE_MOVIE = gql`
       email
       movieCount
       savedMovies {
-        movieId
-        directors
+        director
         plot
         title
         poster
-        link
       }
     }
   }
