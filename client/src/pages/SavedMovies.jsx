@@ -66,11 +66,11 @@ const SavedMovies = () => {
             return (
               <Col md="4" key={movie.movieId}>
                 <Card border='dark'>
-                  {movie.image ? <Card.Img src={movie.image} alt={`The cover for ${movie.title}`} variant='top' /> : null}
+                  {movie.poster ? <Card.Img src={movie.poster} alt={`The cover for ${movie.title}`} variant='top' /> : null}
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
-                    <p className='small'>Authors: {movie.authors}</p>
-                    <Card.Text>{movie.description}</Card.Text>
+                    <p className='small'>Director: {movie.director}</p>
+                    <Card.Text>{movie.plot}</Card.Text>
                     <Button className='btn-block btn-danger' onClick={() => handleDeleteMovie(movie.movieId)}>
                       Delete this Movie!
                     </Button>
