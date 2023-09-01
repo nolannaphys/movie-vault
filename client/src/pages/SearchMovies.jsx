@@ -72,7 +72,7 @@ const SearchMovies = () => {
         poster: items.Poster,
         director: items.Director,
       }]
-      //TODO - Find out what setSearchedBooks is doing
+      //TODO - Find out what setSearchedMovies is doing
       setSearchedMovies(movieData);
       setSearchInput("");
       console.log(movieData);
@@ -147,7 +147,7 @@ const SearchMovies = () => {
       </div>
 
       <Container>
-        <h2 className="pt-5">
+        <h2 className="pt-5 test-class">
           {searchedMovies.length
             ? `Viewing ${searchedMovies.length} results:`
             : "Search for a movie to begin"}
@@ -190,6 +190,9 @@ const SearchMovies = () => {
           })}
         </Row>
       </Container>
+      <div>
+        
+      </div>
     </>
   );
 };
