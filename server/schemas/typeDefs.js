@@ -11,21 +11,19 @@ const typeDefs = gql`
   }
 
   type Movie {
-    movieId: ID!
-    directors: [String]
+    director: [String]
     plot: String
     title: String!
     poster: String
-    link: String
+    
   }
 
   input MovieInput {
-    directors: [String]
+    director: [String]
     plot: String
     title: String!
-    movieId: String!
     poster: String
-    link: String
+    
   }
 
   type Auth {
