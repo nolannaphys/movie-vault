@@ -152,16 +152,17 @@ const SearchMovies = () => {
             ? `Viewing ${searchedMovies.length} results:`
             : "Search for a movie to begin"}
         </h2>
-        <Row>
+        <Row className="movieWrap">
           {searchedMovies.map((movie) => {
             return (
               <Col key={movie.movieId} md="4">
-                <Card border="dark">
+                <Card className="movie-poster">
                   {movie.poster ? (
                     <Card.Img
                       src={movie.poster}
                       alt={`The cover for ${movie.title}`}
                       variant="top"
+                      
                     />
                   ) : null}
                   <Card.Body>

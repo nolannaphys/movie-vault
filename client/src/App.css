@@ -19,4 +19,20 @@ h6 {
 .centered-link {
   display: flex;
   justify-content: center;
+
+}
+
+.movieWrap {
+ 
+  display: flex;
+  justify-content: center; 
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: turquoise;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+}
+
+.movie-poster {
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
 }
