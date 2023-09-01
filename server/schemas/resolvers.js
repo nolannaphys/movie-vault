@@ -34,6 +34,7 @@ const resolvers = {
             return { token, user };
         },
         saveMovie: async (parent, args, context) => {
+            console.log (args)
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     {
