@@ -65,6 +65,7 @@ export const REMOVE_MOVIE = gql`
       email
       movieCount
       savedMovies {
+        movieId
         director
         plot
         title

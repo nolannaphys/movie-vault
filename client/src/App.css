@@ -21,14 +21,24 @@ h6 {
   justify-content: center;
 
 }
-
-.movieWrap {
+/* Search Movie Styling */
+/* .movieWrap {
  
   display: flex;
   justify-content: center; 
   padding: 2rem;
   border-radius: 5px;
   background-color: turquoise;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+} */
+
+.movieWrap {
+  display: flex;
+  justify-content: center; 
+  padding: 2rem;
+  border-radius: 5px;
+  background-image: url('./assets/best-background.jpg');
+  background-size: cover;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
 }
 

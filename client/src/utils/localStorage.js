@@ -15,6 +15,7 @@ export const saveMovieIds = (movieIdArr) => {
 };
 
 export const removeMovieId = (movieId) => {
+  console.log (movieId, "hello")
   const savedMovieIds = localStorage.getItem('saved_movies')
     ? JSON.parse(localStorage.getItem('saved_movies'))
     : null;

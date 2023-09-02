@@ -11,6 +11,7 @@ const typeDefs = gql`
   }
 
   type Movie {
+    movieId: String!
     director: [String]
     plot: String
     title: String!
