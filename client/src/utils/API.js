@@ -3,3 +3,8 @@
 export const searchOMDB = (query) => {
   return fetch(`https://www.omdbapi.com/?t=${query}&apikey=9f162971`);
 };
+
+// calls multiple movies from OMDB
+// export const searchOMDB = (query) => {
+//   return fetch(`https://www.omdbapi.com/?s=${query}&apikey=9f162971`);
+// };
