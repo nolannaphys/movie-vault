@@ -126,8 +126,8 @@ const SearchMovies = () => {
   //NOTE -  This is the return
   return (
     <>
-      <div className="text-light bg-dark pt-5">
-        <Container>
+      <div className="text-light bg-black pt-5">
+        <Container style={{ backgroundColor: 'black' }}>
           <h1>Search for a Movie!🎥🎬 </h1>
           <Form onSubmit={handleFormSubmit}>
             <Row>
@@ -138,7 +138,7 @@ const SearchMovies = () => {
                   onChange={(e) => setSearchInput(e.target.value)}
                   type="text"
                   size="lg"
-                  placeholder="Search for a Movie"
+                  placeholder="Search for a Movie to begin!"
                 />
               </Col>
               <Col xs={12} md={4}>
@@ -154,8 +154,8 @@ const SearchMovies = () => {
       <Container>
         <h2 className="pt-5 test-class">
           {searchedMovies.length
-            ? `Viewing ${searchedMovies.length} results:`
-            : "Search for a movie to begin"}
+            ? `Viewing ${searchedMovies.length} result:`
+            : "Lights, Camera, Action!"}
         </h2>
         <Row className="movieWrap">
           {searchedMovies.map((movie) => {
