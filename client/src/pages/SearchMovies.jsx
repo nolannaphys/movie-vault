@@ -149,7 +149,7 @@ const SearchMovies = () => {
       <Container>
         <h2 className="pt-5">
           {searchedMovies.length
-            ? `Viewing ${searchedMovies.length} results:`
+            ? `Viewing ${searchedMovies.length} result:`
             : "Search for a movie to begin"}
         </h2>
         <Row>
