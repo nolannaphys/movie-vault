@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import {
   Container,
   Col,
@@ -67,12 +67,16 @@ const SearchMovies = () => {
 
       //NOTE - Object Movie
       const movieData = [{
+     
         title: items.Title,
         plot: items.Plot,
         poster: items.Poster,
         director: items.Director,
       }]
+
+
       //TODO - Find out what setSearchedMovies is doing
+    main
       setSearchedMovies(movieData);
       setSearchInput("");
       console.log(movieData);
@@ -100,6 +104,7 @@ const SearchMovies = () => {
         },
         //FIXME - why is it mad?
         update: (cache, { data }) => {
+          console.log (cache, data)
           // Update cache here if needed
         },
         refetchQueries: [{ query: GET_ME }], // Refetch user data after saving the movie

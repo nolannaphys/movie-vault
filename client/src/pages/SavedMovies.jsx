@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   Container,
   Card,
@@ -20,6 +20,7 @@ const SavedMovies = () => {
 
   // create function that accepts the movie's mongo _id value as param and deletes the movie from the database
   const handleDeleteMovie = async (movieId) => {
+    console.log(movieId)
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {

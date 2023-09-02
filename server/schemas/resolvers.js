@@ -54,16 +54,16 @@ const resolvers = {
             }
             throw new Error("user not found");
         },
-        removeMovie: async (parent, args, context) => {
+        removeMovie: async (parent, {movieId}, context) => {
             if (context.user) {
-                const updatedUser = await User.findByIdAndUpdate(
+                const updatedUser = await User.findOneAndUpdate(
                     {
                         _id: context.user._id,
                     },
                     {
                         $pull: {
                             savedMovies: {
-                                movieId: args.movieId
+                                movieId: movieId
                             }
                         },
                     },
