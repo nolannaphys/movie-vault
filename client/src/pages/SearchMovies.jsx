@@ -121,8 +121,8 @@ const SearchMovies = () => {
   //NOTE -  This is the return
   return (
     <>
-      <div className="text-light bg-dark pt-5">
-        <Container>
+      <div className="text-light bg-black pt-5">
+        <Container style={{ backgroundColor: 'black' }}>
           <h1>Search for a Movie!🎥🎬 </h1>
           <Form onSubmit={handleFormSubmit}>
             <Row>
