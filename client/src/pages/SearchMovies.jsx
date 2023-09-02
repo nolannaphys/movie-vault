@@ -76,7 +76,7 @@ const SearchMovies = () => {
 
 
       //TODO - Find out what setSearchedMovies is doing
-    main
+   
       setSearchedMovies(movieData);
       setSearchInput("");
       console.log(movieData);

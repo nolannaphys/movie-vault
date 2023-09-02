@@ -46,6 +46,12 @@ h6 {
   box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
 }
 
+/* .animated-search {
+  font-size: 36px;
+  font-weight: bold;
+  animation: textShadow 1s ease-in-out infinite alternate;
+} */
+
 .movie-poster {
   border-radius: 5px;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
