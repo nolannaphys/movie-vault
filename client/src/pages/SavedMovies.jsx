@@ -50,15 +50,15 @@ const SavedMovies = () => {
 
   return (
     <>
-      <div fluid="true" className="text-light bg-dark p-5">
+      <div fluid="true" className="text-light bg-black p-5">
         <Container>
-          <h1>Viewing saved movies!</h1>
+          <h1>Your Saved Movies!🎞️🎬 </h1>
         </Container>
       </div>
       <Container>
         <h2 className='pt-5'>
           {userData?.savedMovies.length
-            ? `Viewing ${userData.savedMovies.length} saved ${userData?.savedMovies.length === 1 ? 'movie' : 'movies'}:`
+            ? `Viewing your ${userData.savedMovies.length} saved ${userData?.savedMovies.length === 1 ? 'movie' : 'movies'}:`
             : 'You have no saved movies!'}
         </h2>
         <Row>

@@ -133,7 +133,7 @@ const SearchMovies = () => {
                   onChange={(e) => setSearchInput(e.target.value)}
                   type="text"
                   size="lg"
-                  placeholder="Search for a Movie"
+                  placeholder="Search for a Movie to begin!"
                 />
               </Col>
               <Col xs={12} md={4}>
@@ -150,7 +150,7 @@ const SearchMovies = () => {
         <h2 className="pt-5">
           {searchedMovies.length
             ? `Viewing ${searchedMovies.length} result:`
-            : "Search for a movie to begin"}
+            : "Lights, Camera, Action!"}
         </h2>
         <Row>
           {searchedMovies.map((movie) => {
