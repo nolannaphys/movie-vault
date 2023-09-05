@@ -1,46 +1,22 @@
-# Movie-vault
-The introduction summarizes the purpose and function of the project, and should be concise (a brief paragraph or two). This introduction may be the same as the first paragraph on the project page.
+# Movie Vault
 
-https://movie-vault-a6d86baeac1b.herokuapp.com/
+## Description
+A React application that allows users to search for a movie and save it to a watch list.
 
+## Usage
+Users will be able to login to  the website. Once logged in they will be prompted to search for a movie. Once the user has found their desired movie, they can click to save movie button below the movies description. User can view their saved movies by clicking the saved movies button located at the top of the screen in the navbar.
 
-## Table of contents (optional)
+![demo-gif]()
 
-- Requirements
-- Recommended modules
-- Installation
-- Configuration
-- Troubleshooting
-- FAQ
-- Maintainers
+## Credits
 
 
-## Requirements (required)
+## License
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This module requires the following modules:
-- [Bad judgement](https://www.drupal.org/project/bad_judgement)
+## Deployed Application 
+[Deployed Application]()
 
-OR
+[Github]()
 
-This module requires no modules outside of Drupal core.
-
-
-## Recommended modules (optional)
-
-
-## Installation (required, unless a separate INSTALL.md is provided)
-
-Install as you would normally install a contributed Drupal module. For further information, see [Installing Drupal Modules](https://www.drupal.org/docs/extending-drupal/installing-drupal-modules).
-
-
-## Configuration (required)
-
-1. Enable the module at Administration > Extend.
-1. Profit.
-
-
-## Troubleshooting (optional)
-
-
-## FAQ (optional)
-
+[Demo Video]()

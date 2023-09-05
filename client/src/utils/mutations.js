@@ -48,6 +48,7 @@ export const SAVE_MOVIE = gql`
         email
         movieCount
         savedMovies {
+          movieId
           director
           plot
           title

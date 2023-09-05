@@ -17,7 +17,7 @@ const SavedMovies = () => {
   const { loading, data } = useQuery(GET_ME);
   const [removeMovie] = useMutation(REMOVE_MOVIE);
   const userData = data?.me;
-
+  // console.log(userData.savedMovies)
   // create function that accepts the movie's mongo _id value as param and deletes the movie from the database
   const handleDeleteMovie = async (movieId) => {
     console.log(movieId)
@@ -44,7 +44,7 @@ const SavedMovies = () => {
       console.error(err);
     }
   };
-
+ 
   if (loading) {
     return null; // Return null while loading to avoid rendering content
   }
@@ -53,7 +53,7 @@ const SavedMovies = () => {
     <>
       <div fluid="true" className="text-light bg-black p-5">
         <Container>
-          <h1>Your Saved Movies!🎞️🎬 </h1>
+          <h1>🎞️ Your Saved Movies! 🎬 </h1>
         </Container>
       </div>
       <Container>
