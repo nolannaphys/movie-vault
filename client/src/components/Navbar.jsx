@@ -16,21 +16,17 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar style={{ backgroundColor: 'turquoise' }} variant='dark' expand='lg'>
+      <Navbar style={{ backgroundColor: '#ef00e3a8' }} variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
             Movie Vault
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
-          <Nav className='ml-auto d-flex'>
-          <Nav.Link as={Link} to="/" className="animated-search" style={{
-            fontSize: '36px',
-            fontWeight: 'bold',
-            animation: 'textShadow 1s ease-in-out infinite alternate'
-        }}>
-           Search for Movies
-</Nav.Link>
+            <Nav className='ml-auto d-flex'>
+              <Nav.Link as={Link} to="/" >
+                Search for Movies
+              </Nav.Link>
               {/* if user is logged in show saved movies and logout */}
               {Auth.loggedIn() ? (
                 <>
@@ -43,7 +39,7 @@ const AppNavbar = () => {
                 <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
               )}
             </Nav>
-         </Navbar.Collapse> 
+          </Navbar.Collapse>
         </Container>
       </Navbar>
       {/* set modal data up */}
