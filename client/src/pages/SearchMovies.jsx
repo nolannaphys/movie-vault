@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Container,
   Col,
@@ -48,35 +48,15 @@ const SearchMovies = () => {
 
       const items = await response.json();
       console.log(items);
-      // const bookData = items.map((book) => ({
-      //   bookId: book.id,
-      //   authors: book.volumeInfo.authors || ["No author to display"],
-      //   title: book.volumeInfo.title,
-      //   description: book.volumeInfo.description,
-      //   image: book.volumeInfo.imageLinks?.thumbnail || "",
-      //   link: book.volumeInfo.infoLink,
-      // }));
-    
-    //NOTE - is this a better object?
-      // const movieData = items.map((movie) => ({
-      //   title: movie.movie,
-      //   director: director.movie || ["No director to display"],
-      //   plot: plot.movie.full,
-      //   poster: poster.movie
-      // }))
 
       //NOTE - Object Movie
       const movieData = [{
-     
+
         title: items.Title,
         plot: items.Plot,
         poster: items.Poster,
         director: items.Director,
       }]
-
-
-      //TODO - Find out what setSearchedMovies is doing
-   
       setSearchedMovies(movieData);
       setSearchInput("");
       console.log(movieData);
@@ -102,9 +82,8 @@ const SearchMovies = () => {
         variables: {
           movieToSave: movieToSave // Pass the movieToSave object as the variable
         },
-        //FIXME - why is it mad?
         update: (cache, { data }) => {
-          console.log (cache, data)
+          console.log(cache, data)
           // Update cache here if needed
         },
         refetchQueries: [{ query: GET_ME }], // Refetch user data after saving the movie
@@ -167,7 +146,7 @@ const SearchMovies = () => {
                       src={movie.poster}
                       alt={`The cover for ${movie.title}`}
                       variant="top"
-                      
+
                     />
                   ) : null}
                   <Card.Body>
@@ -197,7 +176,7 @@ const SearchMovies = () => {
         </Row>
       </Container>
       <div>
-        
+
       </div>
     </>
   );
