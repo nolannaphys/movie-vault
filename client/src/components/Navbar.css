@@ -7,6 +7,11 @@ font-size: 6rem;
 font-family: "Play", sans-serif;
 }
 
+.movieWrap{
+        background-image: linear-gradient(#ef00e3a8, #0dcaf0);
+
+}
+
 h1 {
 margin: 1rem auto;
 animation: neon 1s ease infinite;
