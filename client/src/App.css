@@ -15,6 +15,7 @@ body {
   color: white;
 }
 
+
 h1,
 h2,
 h3,
@@ -29,12 +30,13 @@ h6 {
   font-weight: 300;
   font-style: italic;
 }
+
 /* centering the returned movie link */
 .centered-link {
   display: flex;
   justify-content: center;
-
 }
+
 
 /* .brand {
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -61,12 +63,12 @@ h6 {
 
 .movieWrap {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   padding: 2rem;
   border-radius: 5px;
   background-image: url('./assets/best-background.jpg');
   background-size: cover;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* .animated-search {
@@ -77,5 +79,5 @@ h6 {
 
 .movie-poster {
   border-radius: 5px;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
