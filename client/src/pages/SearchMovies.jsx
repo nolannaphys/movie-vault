@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 import {
@@ -15,7 +14,7 @@ import { searchOMDB } from "../utils/API";
 import { saveMovieIds, getSavedMovieIds } from "../utils/localStorage";
 import { SAVE_MOVIE } from "../utils/mutations";
 import { GET_ME } from "../utils/queries";
-
+import "../components/Navbar.css"
 
 const SearchMovies = () => {
   // create state for holding returned google api data
@@ -108,11 +107,9 @@ const SearchMovies = () => {
   //NOTE -  This is the return
   return (
     <>
-      <div className=  "text-light bg-black pt-5">
+      <div className="text-light bg-black pt-5">
         <Container style={{ backgroundColor: 'black' }}>
-
           <h1 className="search">🎥 Search for a Movie! 🎬 </h1>
-
           <Form onSubmit={handleFormSubmit}>
             <Row>
               <Col xs={12} md={8}>
@@ -188,3 +185,4 @@ const SearchMovies = () => {
 };
 
 export default SearchMovies;
+
