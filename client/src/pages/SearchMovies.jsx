@@ -123,7 +123,7 @@ const SearchMovies = () => {
                 />
               </Col>
               <Col xs={12} md={4}>
-                <Button type="submit" variant="success" size="lg" style={{ backgroundColor: '#ef00e3a8' }}>
+                <Button type="submit" variant="success" size="lg" className="border-dark" style={{ backgroundColor: '#ef00e3a8' }}>
                   Submit Search
                 </Button>
               </Col>
