@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
-import '../App.css';
+import './Navbar.css';
 
 import Auth from '../utils/auth';
 
@@ -21,13 +21,9 @@ const AppNavbar = () => {
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
           <Nav className='ml-auto d-flex'>
-          <Nav.Link as={Link} to="/" className="animated-search" style={{
-            fontSize: '36px',
-            fontWeight: 'bold',
-            animation: 'textShadow 1s ease-in-out infinite alternate'
-        }}>
+          <Nav.Link as={Link} to="/" className="animated-search" >
            Search for Movies
-</Nav.Link>
+        </Nav.Link>
               {/* if user is logged in show saved movies and logout */}
               {Auth.loggedIn() ? (
                 <>
