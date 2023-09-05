@@ -1,8 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+
+logo {
+  font-family: 'Chewy', cursive;
+  font-size: 40px;
+}
+
+.search {
+  font-size: 30px;
+}
+
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Chewy', cursive;
   background-color: black;
   color: white;
 }
+
+
 h1,
 h2,
 h3,
@@ -10,6 +23,7 @@ h4,
 h5,
 h6 {
   font-family: 'Rubik Mono One', sans-serif;
+  font-size: 30px;
 }
 
 .small {
@@ -21,7 +35,19 @@ h6 {
 .centered-link {
   display: flex;
   justify-content: center;
+}
 
+
+/* .brand {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+} */
+
+.logo {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  width: 500px;
+  height: auto;
 }
 
 /* Search Movie Styling */

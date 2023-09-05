@@ -53,7 +53,7 @@ const SavedMovies = () => {
     <>
       <div fluid="true" className="text-light bg-black p-5">
         <Container>
-          <h1>Your Saved Movies!🎞️🎬 </h1>
+          <h1>🎞️ Your Saved Movies! 🎬 </h1>
         </Container>
       </div>
       <Container>

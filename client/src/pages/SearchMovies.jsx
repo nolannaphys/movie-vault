@@ -107,7 +107,7 @@ const SearchMovies = () => {
     <>
       <div className="text-light bg-black pt-5">
         <Container style={{ backgroundColor: 'black' }}>
-          <h1>Search for a Movie!🎥🎬 </h1>
+          <h1 className="search">🎥 Search for a Movie! 🎬 </h1>
           <Form onSubmit={handleFormSubmit}>
             <Row>
               <Col xs={12} md={8}>
