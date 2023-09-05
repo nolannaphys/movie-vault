@@ -5,6 +5,7 @@ import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
 
 import '../App.css';
+import logo from '../assets/logo.png';
 
 
 import Auth from '../utils/auth';

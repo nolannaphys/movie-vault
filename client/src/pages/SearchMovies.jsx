@@ -1,4 +1,6 @@
+
 import { useState, useEffect } from "react";
+
 import {
   Container,
   Col,
@@ -314,7 +316,11 @@ const SearchMovies = () => {
     <>
       <div className=  "text-light bg-black pt-5">
         <Container style={{ backgroundColor: 'black' }}>
-          <h1 className="animation">Search for a Movie!🎥🎬 </h1>
+<<<<<<<<< Temporary merge branch 1
+          <h1 className="search">🎥 Search for a Movie! 🎬 </h1>
+=========
+         
+>>>>>>>>> Temporary merge branch 2
           <Form onSubmit={handleFormSubmit}>
             <Row>
               <Col xs={12} md={8}>
