@@ -16,9 +16,9 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar style={{ backgroundColor: '#ef00e3a8' }} variant='dark' expand='lg'>
+      <Navbar style={{ backgroundColor: '#ef00e3a8'}} variant='dark' expand='lg'>
         <Container fluid>
-          <Navbar.Brand as={Link} to='/'>
+          <Navbar.Brand as={Link} to='/' style={{fontSize: '36px'}}>
             Movie Vault
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
