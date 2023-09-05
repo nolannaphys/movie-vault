@@ -7,7 +7,7 @@ User lists are tied to their login, so they are able to view their lists from an
 
 
 ## Usage
-Users will be able to login to  the website. Once logged in they will be prompted to search for a movie. Once the user has found their desired movie, they can click to save movie button below the movies description. User can view their saved movies by clicking the saved movies button located at the top of the screen in the navbar.
+Users will be able to login to  the website. Once logged in they will be prompted to search for a movie. Once the user has found their desired movie, they can click to save movie button below the movies description. Users can view their saved movies by clicking the saved movies button located at the top of the screen in the navbar.
 
 ![demo-gif](./client/src/assets/Movie%20Vault%20Demo.gif)
 
