@@ -17,7 +17,10 @@ const SavedMovies = () => {
   const { loading, data } = useQuery(GET_ME);
   const [removeMovie] = useMutation(REMOVE_MOVIE);
   const userData = data?.me;
-  // console.log(userData.savedMovies)
+  
+  setTimeout(()=>{
+    console.log(userData.savedMovies)
+  }, 3000)
   // create function that accepts the movie's mongo _id value as param and deletes the movie from the database
   const handleDeleteMovie = async (movieId) => {
     console.log(movieId)

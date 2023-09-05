@@ -67,7 +67,7 @@ const SearchMovies = () => {
 
       //NOTE - Object Movie
       const movieData = [{
-     
+        movieId: items.imdbID,
         title: items.Title,
         plot: items.Plot,
         poster: items.Poster,

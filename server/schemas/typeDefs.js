@@ -11,7 +11,7 @@ const typeDefs = gql`
   }
 
   type Movie {
-    movieId: ID
+    movieId: String
     director: [String]
     plot: String
     title: String!
@@ -20,7 +20,7 @@ const typeDefs = gql`
   }
 
   input MovieInput {
-    movieId: ID
+    movieId: String!
     director: [String]
     plot: String
     title: String!
@@ -41,7 +41,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     saveMovie(movieToSave: MovieInput!): User
-    removeMovie(movieId: ID): User
+    removeMovie(movieId: String!): User
   }
 `;
 
