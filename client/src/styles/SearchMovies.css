@@ -27,3 +27,19 @@ animation: neon 1s ease infinite;
     color: #eda0d3;
 }
 }
+
+@media screen and (max-width: 1200px) {
+    .search {
+      font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .border-dark {
+        margin-top: 1em;
+    }
+
+    .search {
+        font-size: 2rem;
+    }
+}
