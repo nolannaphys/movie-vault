@@ -21,8 +21,8 @@ const AppNavbar = () => {
           <Navbar.Brand as={Link} to='/' style={{fontSize: '36px'}}>
             Movie Vault
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='navbar' />
-          <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav' className=' flex-row-reverse'>
             <Nav className='ml-auto d-flex'>
               <Nav.Link as={Link} to="/" >
                 Search for Movies
@@ -30,7 +30,7 @@ const AppNavbar = () => {
               {/* if user is logged in show saved movies and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to='/saved' className="centered-link">
+                  <Nav.Link as={Link} to='/saved'>
                     My Movies
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
