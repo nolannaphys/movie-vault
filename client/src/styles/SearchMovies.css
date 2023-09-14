@@ -43,3 +43,17 @@ animation: neon 1s ease infinite;
         font-size: 2rem;
     }
 }
+/* Iphone X viewing */
+@media screen and (min-width: 375px) {
+    .border-dark {
+        margin-top: 1em;
+    }
+
+    .search {
+        font-size: 1em;
+    }
+
+    .test-class {
+        font-size: 1em;
+    }
+}
