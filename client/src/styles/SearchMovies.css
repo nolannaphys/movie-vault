@@ -43,8 +43,9 @@ animation: neon 1s ease infinite;
         font-size: 2rem;
     }
 }
+
 /* Iphone X viewing */
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
     .border-dark {
         margin-top: 1em;
     }
