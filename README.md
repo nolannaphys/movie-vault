@@ -1,17 +1,20 @@
 # 🎥 Movie Vault 🎬
 
 ## Description
-Movie Vault is a react application that uses the OMDb to allow users to search for movies so that they can view a quick plot summary and it's director. The application also allows for users to add movies to a watchlist for later reference.
+Movie Vault is a React application that uses the Open Movies Database (OMDb) API to allow users to search for movies and save them to their profile. a quick plot summary and its director. The application also allows for users to add movies to a watchlist for later reference.
 
-User lists are tied to their login, so they are able to view their lists from any device.
+Users' saved movie lists are tied to their login, so they are able to view their lists from any device.
 
+## Installation
+All of the following dependencies will need to be installed to run the application in the local host: ReactJS, Vite, Bootstrap, Apollo, GraphQL. This can be done by inputting `npm i` into the console and are located in the `package.json` files. 
 
 ## Usage
-Users will be able to login to  the website. Once logged in they will be prompted to search for a movie. Once the user has found their desired movie, they can click to save movie button below the movies description. User can view their saved movies by clicking the saved movies button located at the top of the screen in the navbar.
+Users will be able to sign up or log in to the website to save movies to their profile. Once the user has found their desired movie by typing the name into the search bar they can click the save movie button below the movie's description to save it to their profile. Users can view their saved movies by clicking "My Movies" located in the navbar.
 
 ![demo-gif](./client/src/assets/Movie%20Vault%20Demo.gif)
 
 ## Credits
+
 Code from one of our previous applications, a book search and save, was used as a starting point for this app.
 
 ## License
@@ -19,7 +22,5 @@ Code from one of our previous applications, a book search and save, was used as 
 
 ## Deployed Application 
 [Deployed Application](https://movie-vault-a6d86baeac1b.herokuapp.com/)
-
-[Github](https://github.com/nolannaphys/movie-vault)
 
 [Demo Video](https://drive.google.com/file/d/1eMs8Bx4LjeXDD3TnhqBqR4-B_8lRxpCx/view)

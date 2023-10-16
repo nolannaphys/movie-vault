@@ -14,7 +14,7 @@ import { searchOMDB } from "../utils/API";
 import { saveMovieIds, getSavedMovieIds } from "../utils/localStorage";
 import { SAVE_MOVIE } from "../utils/mutations";
 import { GET_ME } from "../utils/queries";
-import "../components/Navbar.css"
+import "../styles/SearchMovies.css";
 
 const SearchMovies = () => {
   // create state for holding returned google api data
