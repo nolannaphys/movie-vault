@@ -14,7 +14,8 @@ Users will be able to sign up or log in to the website to save movies to their p
 ![demo-gif](./client/src/assets/Movie%20Vault%20Demo.gif)
 
 ## Credits
-Code from a book search and save application from a previous project was used as starter code for this application.
+
+Code from one of our previous applications, a book search and save, was used as a starting point for this app.
 
 ## License
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
