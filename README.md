@@ -1,7 +1,7 @@
 # 🎥 Movie Vault 🎬
 
 ## Description
-Movie Vault is a React application that uses the Open Movies Database (OMDb) API to allow users to search for movies and save them to their profile. a quick plot summary and its director. The application also allows for users to add movies to a watchlist for later reference.
+Movie Vault is a React application that uses the Open Movies Database (OMDb) API to allow users to search for movies and save them to their profile. After searching the user will see the poster art for the movie including a quick plot summary and its director. The application also allows for users to add movies to a watchlist for later reference.
 
 Users' saved movie lists are tied to their login, so they are able to view their lists from any device.
 
